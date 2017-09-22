@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('bureaux', 'BureauxController',['except'=>'destroy']);
+Route::resource('bureau', 'BureauController',['except'=>'destroy']);
