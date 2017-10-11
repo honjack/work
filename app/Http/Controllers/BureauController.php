@@ -15,4 +15,16 @@ class BureauController extends Controller
     public function create(){
         return view('bureau.create');
     }
+
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'bureau' => 'required',
+        ]);
+        $bureau=$request->all();
+        return view('bureau.create',compact('bureau'));
+
+
+
+    }
 }
