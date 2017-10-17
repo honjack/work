@@ -1,3 +1,3 @@
 @foreach ($bureaux as $bureau)
-    {{$bureau}}
+    {{$bureau}}</br>
 @endforeach
