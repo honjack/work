@@ -20,13 +20,38 @@ class BureauController extends Controller
     public function store(Request $request)
     {
 
-        $bureaux=new Bureau();
-        $bureaux->bureau=$request->bureau;
-        $bureaux->save();
-        return redirect('bureau');
+        $bureau=new Bureau();
+        $bureau->bureau=$request->bureau;
+        $bureau->save();
 
-
+        return redirect()->route('bureau.index');
 
 
     }
+
+    public function edit($id)
+    {
+        $bureau=Bureau::find($id);
+        return view('bureau.edit',['bureau'=>$bureau]);
+
+
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function update(Request $request)
+    {
+        $bureau = new Bureau();
+        $bureau = Bureau::find($request->id);
+        $bureau->bureau=$request->bureau;
+        dd($bureau);
+        $bureau->save();
+
+        //Session::flash('success', trans('admin/blog.posts.update.messages.success'));
+        return redirect()->route('bureau.index');
+
+    }
+    
 }
