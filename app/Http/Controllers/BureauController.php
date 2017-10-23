@@ -33,7 +33,8 @@ class BureauController extends Controller
     {
         $bureau=Bureau::find($id);
         //dd($bureau);
-        return view('bureau.edit',['bureau'=>$bureau]);
+        //return view('bureau.edit',['bureau'=>$bureau]);
+        return view('bureau.edit',compact('bureau'));
 
 
     }

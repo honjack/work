@@ -1,6 +1,6 @@
 
 <div class="form-group">
-    {!! Form::open(array('route'=>array('area.update',$area->id),'method'=>'put')) !!}
+    {!! Form::open(array('route'=>array('area.update',$area->id),'method'=>'patch')) !!}
 
     <div class="form-control">
         {!! Form::label('area','area:') !!}
