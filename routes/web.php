@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::resource('bureau', 'BureauController',['except'=>'destroy']);
+Route::resource('area','AreaController',['except'=>'destroy']);
