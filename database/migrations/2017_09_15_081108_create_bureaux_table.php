@@ -13,7 +13,7 @@ class CreateBureauxTable extends Migration
      */
     public function up()
     {
-        Schema::create('bureau', function (Blueprint $table) {
+        Schema::create('bureaux', function (Blueprint $table) {
             $table->increments('id');
             $table->string('bureau');
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateBureauxTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bureau');
+        Schema::dropIfExists('bureaux');
     }
 }

@@ -17,6 +17,7 @@ class CreateCluesTable extends Migration
             $table->increments('id');
             $table->longText('clue');
             $table->string('inOrEx');
+            $table->string('area');
             $table->date('date');
             $table->longText('remark');
             $table->timestamps();
