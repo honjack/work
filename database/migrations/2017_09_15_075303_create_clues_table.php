@@ -19,7 +19,7 @@ class CreateCluesTable extends Migration
             $table->string('inOrEx');
             $table->string('area');
             $table->date('date');
-            $table->longText('remark');
+            $table->longText('remark')->nullable();
             $table->timestamps();
         });
     }

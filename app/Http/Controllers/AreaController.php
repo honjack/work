@@ -44,5 +44,14 @@ class AreaController extends Controller
         $area->save();
         return redirect()->route('area.index');
     }
+
+    public function lists()
+    {
+        $areas=new Area();
+        foreach ($area as $area){
+            return $area;
+        }
+        
+    }
     
 }
